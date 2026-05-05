@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=Intermadiate_k_m
+PRODUCT_BUNDLE_IDENTIFIER=com.example.intermadiate_k_m.Intermadiate_k_m$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0
