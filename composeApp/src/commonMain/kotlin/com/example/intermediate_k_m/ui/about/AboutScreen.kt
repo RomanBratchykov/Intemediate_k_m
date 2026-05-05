@@ -16,13 +16,13 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.intermediate_k_m.ui.theme.AppTheme
 
 @Composable
 internal fun AboutScreen(
@@ -57,7 +57,7 @@ private fun Toolbar(
 
 @Composable
 private fun AboutContent(viewModel: AboutViewModel) {
-    val state by viewModel.state.collectAsState()
+    val state by viewModel.state.collectAsStateWithLifecycle()
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -78,7 +78,7 @@ private fun RowView(
             Text(
                 text = title,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color.Gray,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             Text(
                 text = subtitle,
@@ -92,6 +92,8 @@ private fun RowView(
 @Preview(showBackground = true)
 @Composable
 private fun AboutPreview() {
-    AboutScreen {
+    AppTheme {
+        AboutScreen {
+        }
     }
 }

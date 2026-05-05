@@ -59,7 +59,7 @@ kotlin {
             implementation(libs.datetime)
             implementation(libs.navigation.compose)
             implementation(libs.material.icons.core)
-            api(libs.androidx.lifecycle.viewmodel)
+
         }
         iosMain.dependencies {
             implementation(libs.kermit)
@@ -115,7 +115,6 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            // Оновлено назву пакету для інсталяторів
             packageName = "com.example.intermediate_k_m"
             packageVersion = "1.0.0"
         }
