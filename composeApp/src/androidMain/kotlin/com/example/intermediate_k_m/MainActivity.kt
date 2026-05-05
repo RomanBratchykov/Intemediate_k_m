@@ -1,4 +1,4 @@
-package com.example.intermadiate_k_m
+package com.example.intermediate_k_m
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,14 +6,14 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-
+import com.example.intermediate_k_m.ui.root.AppScaffold
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
         setContent {
-            App()
+            AppScaffold()
         }
     }
 }
@@ -21,5 +21,5 @@ class MainActivity : ComponentActivity() {
 @Preview
 @Composable
 fun AppAndroidPreview() {
-    App()
+    AppScaffold()
 }

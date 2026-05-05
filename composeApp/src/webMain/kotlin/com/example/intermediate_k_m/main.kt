@@ -1,4 +1,4 @@
-package com.example.intermadiate_k_m
+package com.example.intermediate_k_m
 
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.window.ComposeViewport

@@ -16,7 +16,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     listOf(
         iosArm64(),
         iosSimulatorArm64()
@@ -26,24 +26,25 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     jvm()
-    
+
     js {
         browser()
         binaries.executable()
     }
-    
+
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         browser()
         binaries.executable()
     }
-    
+
     sourceSets {
         androidMain.dependencies {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.kermit)
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)
@@ -54,6 +55,14 @@ kotlin {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+            implementation(libs.kermit)
+            implementation(libs.datetime)
+            implementation(libs.navigation.compose)
+            implementation(libs.material.icons.core)
+            api(libs.androidx.lifecycle.viewmodel)
+        }
+        iosMain.dependencies {
+            implementation(libs.kermit)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -61,16 +70,17 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+            implementation(libs.kermit)
         }
     }
 }
 
 android {
-    namespace = "com.example.intermadiate_k_m"
+    namespace = "ua.edu.chnu.kkn.organise"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.example.intermadiate_k_m"
+        applicationId = "ua.edu.chnu.kkn.organise"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -98,11 +108,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "com.example.intermadiate_k_m.MainKt"
+        mainClass = "ua.edu.chnu.kkn.organise.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.example.intermadiate_k_m"
+            packageName = "ua.edu.chnu.kkn.organise"
             packageVersion = "1.0.0"
         }
     }

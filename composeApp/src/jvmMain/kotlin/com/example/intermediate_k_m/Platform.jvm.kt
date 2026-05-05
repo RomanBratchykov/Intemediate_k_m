@@ -1,4 +1,4 @@
-package com.example.intermadiate_k_m
+package com.example.intermediate_k_m
 
 class JVMPlatform: Platform {
     override val name: String = "Java ${System.getProperty("java.version")}"
