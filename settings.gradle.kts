@@ -1,4 +1,4 @@
-rootProject.name = "Intermadiate_k_m"
+rootProject.name = "Intermediate_k_m"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

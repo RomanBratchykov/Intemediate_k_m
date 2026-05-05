@@ -76,11 +76,13 @@ kotlin {
 }
 
 android {
-    namespace = "ua.edu.chnu.kkn.organise"
+
+    namespace = "com.example.intermediate_k_m"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "ua.edu.chnu.kkn.organise"
+
+        applicationId = "com.example.intermediate_k_m"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -108,11 +110,13 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "ua.edu.chnu.kkn.organise.MainKt"
+
+        mainClass = "com.example.intermediate_k_m.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "ua.edu.chnu.kkn.organise"
+            // Оновлено назву пакету для інсталяторів
+            packageName = "com.example.intermediate_k_m"
             packageVersion = "1.0.0"
         }
     }
