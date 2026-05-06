@@ -1,5 +1,5 @@
 package com.example.intermediate_k_m.data.about
-
+@Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 expect class Platform() {
     val osName: String
     val osVersion: String
@@ -11,7 +11,7 @@ expect class Platform() {
 
     fun logSystemInfo()
 }
-
+@Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 expect class ScreenInfo() {
     val width: Int
     val height: Int

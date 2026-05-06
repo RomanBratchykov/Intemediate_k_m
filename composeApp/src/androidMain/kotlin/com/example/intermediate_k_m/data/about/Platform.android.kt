@@ -4,7 +4,7 @@ import android.content.res.Resources
 import android.os.Build
 import co.touchlab.kermit.Logger
 import kotlin.math.round
-
+@Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 actual class Platform actual constructor() {
     actual val osName: String
         get() = "Android"
@@ -21,7 +21,7 @@ actual class Platform actual constructor() {
         Logger.d("Platform $deviceInfo")
     }
 }
-
+@Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 actual class ScreenInfo actual constructor() {
 
     private val metrics = Resources.getSystem().displayMetrics
